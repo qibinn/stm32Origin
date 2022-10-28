@@ -38,6 +38,32 @@
 /*            Cortex-M3 Processor Exceptions Handlers                         */
 /******************************************************************************/
 
+#include "stm32f10x_usart.h"
+
+
+//< 自定义串口接收函数
+void USART1_IRQHandler(void)
+{
+    
+    //< main中开启了接收中断和空闲中断
+    if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+    {
+//        sscom[sscom_cur_len++] = USART_ReceiveData(USART1);
+//        USART_SendData(USART1,sscom[sscom_cur_len-1]);
+        
+        //< 读操作会将USART_IT_RXNE清零, 可以不clear
+        USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+    }
+    else if(USART_GetITStatus(USART1, USART_IT_IDLE) != RESET)
+    {
+        //< 接收完成
+    }
+
+    
+    
+}
+
+
 /**
   * @brief   This function handles NMI exception.
   * @param  None

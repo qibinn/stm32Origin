@@ -323,7 +323,7 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
@@ -337,7 +337,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Libraries\CMSIS\CM3\CoreSupport;..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\Libraries\STM32F10x_StdPeriph_Driver\src;..\USER;..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x</IncludePath>
+              <IncludePath>..\Libraries\CMSIS\CM3\CoreSupport;..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\Libraries\STM32F10x_StdPeriph_Driver\src;..\USER;..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x;..\hal_api</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -395,6 +395,21 @@
               <FileName>stm32f10x_conf.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\USER\stm32f10x_conf.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>hal_api</GroupName>
+          <Files>
+            <File>
+              <FileName>uart_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hal_api\uart_api.c</FilePath>
+            </File>
+            <File>
+              <FileName>gpio_api.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\hal_api\gpio_api.c</FilePath>
             </File>
           </Files>
         </Group>
